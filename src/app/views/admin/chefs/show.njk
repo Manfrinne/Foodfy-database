@@ -1,2 +1,100 @@
 
-CHEF DETALHE
+{% extends "../layout.njk" %}
+
+{% block content %}
+
+<div class="menu-chefe-details">
+  <h2 class="chef-name">Chefe: Nome do Chefe</h2>
+  <div class="buttons">
+    <a href="#">Editar Chefe</a>
+  </div>
+</div>
+
+<section class="chefs-details">
+
+  <div class="chef-presentation-avatar">
+    <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Avatar Chefe">
+    <h1 class="avatar-chef-name">Nome do Chefe</h1>
+    <h4 class="avatar-amount-recipes">4 receitas</h1>
+  </div>
+
+  <h2 class="recipes-title-cards">Receitas</h2>
+
+  <div class="chef-recipes-cards">
+
+    <div class="single-recipe-card">
+      <div class="recipe-image">
+        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="Image recipe-name">
+      </div>
+      <div class="card-recipe-description">
+        <div class="card-description-plate-name">
+          <h6>Nome do Prato</h6>
+        </div>
+        <div class="card-description-chef-name">
+          <p>Por Nome do Chefe</p>
+        </div>
+        <div class="button-description-toView">
+          <a href="#">Visualizar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-recipe-card">
+      <div class="recipe-image">
+        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="Image recipe-name">
+      </div>
+      <div class="card-recipe-description">
+        <div class="card-description-plate-name">
+          <h6>Nome do Prato</h6>
+        </div>
+        <div class="card-description-chef-name">
+          <p>Por Nome do Chefe</p>
+        </div>
+        <div class="button-description-toView">
+          <a href="#">Visualizar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-recipe-card">
+      <div class="recipe-image">
+        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="Image recipe-name">
+      </div>
+      <div class="card-recipe-description">
+        <div class="card-description-plate-name">
+          <h6>Nome do Prato</h6>
+        </div>
+        <div class="card-description-chef-name">
+          <p>Por Nome do Chefe</p>
+        </div>
+        <div class="button-description-toView">
+          <a href="#">Visualizar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-recipe-card">
+      <div class="recipe-image">
+        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="Image recipe-name">
+      </div>
+      <div class="card-recipe-description">
+        <div class="card-description-plate-name">
+          <h6>Nome do Prato</h6>
+        </div>
+        <div class="card-description-chef-name">
+          <p>Por Nome do Chefe</p>
+        </div>
+        <div class="button-description-toView">
+          <a href="#">Visualizar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock content %}
+
+
+
