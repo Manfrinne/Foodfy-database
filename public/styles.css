@@ -160,6 +160,63 @@ header {
   margin-top: 0px;
 }
 
+/* CRIAR CHEFE - CREATE PAGE */
+
+.menu-chefe-create {
+  width: 940px;
+  margin: auto;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-chefe-create .chef-create {
+  font-size: 24px;
+  color: #111111;
+}
+
+.menu-chefe-create .buttons {
+  background-color: #6558C3;
+  border-radius: 4px;
+  width: 120px;
+  height: 37px;
+}
 
 
+.menu-chefe-create .buttons a {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-block {
+  width: 940px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.input-block label {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111111;
+}
+
+.input-block input {
+    width: 900px;
+    height: 49px;
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-family: 'Roboto', regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+}
 
