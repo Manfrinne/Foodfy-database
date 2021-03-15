@@ -176,7 +176,7 @@ header {
   margin-top: 0px;
 }
 
-/* CRIAR CHEFE - CREATE PAGE */
+/* CRIAR E EDITAR CHEFE - CREATE/EDIT PAGE */
 
 .input-block {
   width: 940px;
@@ -203,6 +203,40 @@ header {
     font-weight: 400;
     font-size: 16px;
     color: #111111;
+}
+
+/* CRIAR CHEFE - CREATE PAGE */
+
+.buttons button {
+  font-family: 'Roboto', bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  background-color: #6558C3;
+  width: 120px;
+  height: 37px;
+}
+
+/* EDITAR CHEFE - EDIT PAGE */
+
+.buttons-edit-page button {
+  font-family: 'Roboto', bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.buttons-edit-page .delete-button {
+  background: #DC4747;
+  width: 120px;
+  height: 37px;
+}
+
+.buttons-edit-page button + button {
+  background-color: #6558C3;
+  width: 120px;
+  height: 37px;
+  margin-left: 10px;
 }
 
 /* CHEFE LISTAGEM - INDEX PAGE */
