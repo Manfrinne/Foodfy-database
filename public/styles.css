@@ -38,6 +38,48 @@ header {
   color: #ffffff;
 }
 
+/* CLASSES GLOBAIS - ALL PAGES */
+
+.menu-chefe {
+  width: 940px;
+  margin: auto;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-chefe .title-chef {
+  font-size: 24px;
+  color: #111111;
+}
+
+.buttons {
+  background-color: #6558C3;
+  border-radius: 4px;
+  width: 120px;
+  height: 37px;
+}
+
+.buttons a {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-description-toView a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #6558C3;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+
 /* DETALHES CHEF - SHOW PAGE */
 
 .chefs-details {
@@ -58,23 +100,6 @@ header {
 .menu-chefe-details .chef-name {
   font-size: 24px;
   color: #111111;
-}
-
-.menu-chefe-details .buttons {
-  background-color: #6558C3;
-  border-radius: 4px;
-  width: 120px;
-  height: 37px;
-}
-
-
-.menu-chefe-details .buttons a {
-  display: flex;
-  font-size: 16px;
-  font-weight: bold;
-  color: #FFFFFF;
-  align-items: center;
-  justify-content: center;
 }
 
 .chef-presentation-avatar {
@@ -151,47 +176,7 @@ header {
   margin-top: 0px;
 }
 
-.chef-recipes-cards .single-recipe-card .card-recipe-description .button-description-toView a {
-  font-weight: bold;
-  font-size: 14px;
-  color: #6558C3;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
 /* CRIAR CHEFE - CREATE PAGE */
-
-.menu-chefe-create {
-  width: 940px;
-  margin: auto;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-chefe-create .chef-create {
-  font-size: 24px;
-  color: #111111;
-}
-
-.menu-chefe-create .buttons {
-  background-color: #6558C3;
-  border-radius: 4px;
-  width: 120px;
-  height: 37px;
-}
-
-
-.menu-chefe-create .buttons a {
-  display: flex;
-  font-size: 16px;
-  font-weight: bold;
-  color: #FFFFFF;
-  align-items: center;
-  justify-content: center;
-}
 
 .input-block {
   width: 940px;
@@ -220,3 +205,34 @@ header {
     color: #111111;
 }
 
+/* CHEFE LISTAGEM - INDEX PAGE */
+
+.chef-manager-cards {
+  width: 940px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.chef-manager-cards .single-chef-manager-card {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.chef-manager-cards .single-chef-manager-card .avatar-chef-manager img {
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.card-description-chef-name h6 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #111111;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
