@@ -18,7 +18,7 @@ header {
     margin: 32px auto;
 
     display: grid;
-    grid-template-columns: 213px 1fr;
+    grid-template-columns: 213px 1fr 1fr;
 }
 
 #pointerLogo {
@@ -33,6 +33,8 @@ header .menu a {
     text-decoration: none;
     padding: 15px;
 }
+
+/* HOME - INDEX PAGE */
 
 .hero {
     width: 940px;
@@ -131,6 +133,7 @@ h2 {
     color: #999999;
     text-align: center;
 
+    margin-top: 40px;
     height: 50px;
 }
 
@@ -251,7 +254,49 @@ h2 {
     cursor: pointer;
 }
 
+/* FILTER HEADER */
 
+header .header {
+  width: 727px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+header .header a {
+  margin: 0;
+  width: 120px;
+}
+
+header .header form {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  grid-gap: 8px;
+}
+
+header .header form input {
+  border: 1px solid #eee;
+  padding: 10px 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+header .header form button {
+  margin: 0;
+}
+
+button[type="submit"] {
+  padding: 8px 32px;
+  font-size: 16px;
+  color: white;
+  background: #6558C3;
+  width: 100%;
+  border-radius: 4px;
+}
 
 
 

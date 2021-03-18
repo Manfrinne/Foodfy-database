@@ -5,8 +5,22 @@
 {% endblock %}
 
 {% block header %}
-    <a href="/client/about">Sobre</a>
-    <a href="/client/recipes">Receitas</a>
+
+  <div class="header">
+
+    <div>
+      <a href="/client/about">Sobre</a>
+      <a href="/client/recipes">Receitas</a>
+      <a href="/client/chefs">Chefs</a>
+    </div>
+
+    <form action="/client" method="GET">
+      <input type="text" name="filter" placeholder="Buscar uma receita" value={{filter}}>
+      <button type="submit">Buscar</button>
+    </form>
+
+  </div>
+
 {% endblock %}
 
 {% block content %}
