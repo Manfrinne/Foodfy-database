@@ -35,6 +35,9 @@ header {
 
 .header-content .menu-links a + a {
   margin-left: 30px;
+}
+
+.header-content .menu-links a.active {
   color: #ffffff;
 }
 
@@ -43,7 +46,7 @@ header {
 .menu {
   width: 940px;
   margin: auto;
-  height: 120px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -366,7 +369,7 @@ textarea {
   color: #111111;
 }
 
-/* SHOW ADMIN PAGE  */
+ /* SHOW ADMIN PAGE  */
 
 .uniq_recipe {
   min-height: 1250px;

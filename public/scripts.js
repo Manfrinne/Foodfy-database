@@ -1,39 +1,13 @@
 
-// RECIPE FORM - CREATE AND EDIT PAGES
+// SELECT MENU
 
-// Função para adicionar elemento na lista de ingredientes
-function addIngredient() {
-  const ingredients = document.querySelector("#ingredients");
-  const fieldContainer = document.querySelectorAll(".ingredient");
+// Verificar window tree HTML/JavaScript
+const currentPage = window.location.pathname
+const menuItens = document.querySelectorAll("header .menu-links a")
 
-  // Realiza um clone do último ingrediente adicionado
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true)
-
-  // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == "") return false
-
-  // Deixa o valor do input vazio
-  newField.children[0].value = ""
-  ingredients.appendChild(newField)
+for (item of menuItens) {
+  // O método '.includes' vai me retornar um bolean value.
+  if (currentPage.includes(item.getAttribute("href"))) {
+    item.classList.add("active")
+  }
 }
-
-document.querySelector(".add-ingredient").addEventListener("click", addIngredient)
-
-
-// Função para adicionar elemento na lista de passos
-function addSteps() {
-  const ingredients = document.querySelector("#preparations-steps")
-  const fieldContainer = document.querySelectorAll(".preparations-step")
-
-  // Realiza um clone do último ingrediente adicionado
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true)
-
-  // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == "") return false
-
-  // Deixa o valor do input vazio
-  newField.children[0].value = ""
-  ingredients.appendChild(newField)
-}
-
-document.querySelector(".add-steps").addEventListener("click", addSteps)
