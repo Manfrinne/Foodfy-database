@@ -14,23 +14,7 @@
 
 <form method=POST id="salve" action="/admin/chefs?_method=PUT">
 
-  <div class="inputs-chefe-edit">
-    <div class="input-block">
-      <label for="name">Nome</label>
-      <div>
-        <input type="text" name="name" placeholder="Nome do chefe" value="">
-      </div>
-    </div>
-  </div>
-
-  <div class="inputs-chefe-edit">
-    <div class="input-block">
-      <label for="avatar_url">Avatar</label>
-      <div>
-        <input type="url" name="avatar_url" placeholder="http://..." value="">
-      </div>
-    </div>
-  </div>
+  {% include 'admin/chefs/fields.njk' %}
 
 </form>
 
