@@ -40,7 +40,7 @@ header {
 
 /* CLASSES GLOBAIS - ALL PAGES */
 
-.menu-chefe {
+.menu {
   width: 940px;
   margin: auto;
   height: 130px;
@@ -49,7 +49,7 @@ header {
   justify-content: space-between;
 }
 
-.menu-chefe .title-chef {
+.menu-chefe .title {
   font-size: 24px;
   color: #111111;
 }

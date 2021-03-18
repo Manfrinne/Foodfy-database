@@ -1,2 +1,29 @@
 
-RECEITA EDICAO
+
+{% extends "../layout.njk" %}
+
+{% block head %}
+  <script src="/scripts.js" defer></script>
+{% endblock head %}
+
+{% block content %}
+
+<div class="menu">
+  <h2 class="title">Editando recipe</h2>
+  <div class="buttons-edit-page">
+    <button type="submit" form="delete" class="delete-button">Deletar</button>
+    <button type="submit" form="salve">Salvar recipe</button>
+  </div>
+</div>
+
+<form method=POST id="salve" action="/admin/recipes?_method=PUT">
+
+  {% include 'admin/recipes/fields.njk' %}
+
+</form>
+
+<form method="POST" id="delete" action="/admin/recipes?_method=DELETE">
+  <input type="hidden" name="id" value="">
+</form>
+
+{% endblock content %}
