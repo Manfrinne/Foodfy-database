@@ -11,5 +11,8 @@ module.exports = {
   },
   showRecipe(req, res) {
     return res.render('client/recipe')
+  },
+  listChefs(req, res) {
+    return res.render('client/chefs')
   }
 }

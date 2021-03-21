@@ -8,12 +8,14 @@ html, body {
     border: 0px;
 }
 
-body {
-    background-color: white;
+
+.content-layer {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 80px;
 }
 
 header {
-    position: relative;
     width: 940px;
     margin: 32px auto;
 
@@ -32,6 +34,23 @@ header .menu a {
     line-height: 26px;
     text-decoration: none;
     padding: 15px;
+}
+
+.menu-links {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.footer {
+  width: 100%;
+  border-top: 2px solid rgb(214, 178, 178);
+  background: #EEEEEE;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  height: 50px;
+  bottom: 0;
+  position: absolute;
 }
 
 /* HOME - INDEX PAGE */
@@ -104,7 +123,6 @@ h2 {
     width: 300px;
     height: 140px;
     border-radius: 15px;
-    position: relative;
 }
 
 
@@ -125,22 +143,9 @@ h2 {
     margin-bottom: 10px;
 }
 
-.footer {
-    border-top: 2px solid rgb(214, 178, 178);
-
-    background: #EEEEEE;
-    font-size: 14px;
-    color: #999999;
-    text-align: center;
-
-    margin-top: 40px;
-    height: 50px;
-}
-
 /* Sobre-HTML */
 
 .sobre-text {
-    position: relative;
     width: 940px;
     margin: 32px auto;
 }
@@ -296,6 +301,45 @@ button[type="submit"] {
   background: #6558C3;
   width: 100%;
   border-radius: 4px;
+}
+
+/* CHEFE LISTAGEM - CHEFS PAGE */
+
+.chef-manager-cards {
+  width: 940px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.chef-manager-cards .single-chef-manager-card {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.chef-manager-cards .single-chef-manager-card .avatar-chef-manager img {
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.card-description-chef-name h6 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #111111;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.chef-manager-cards .single-chef-manager-card .chef-card-description .recipes-amount {
+  font-size: 14px;
+  color: #666666;
+  margin-left: 20px;
+  margin-top: 0px;
 }
 
 

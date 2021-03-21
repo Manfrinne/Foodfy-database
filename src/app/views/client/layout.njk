@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
 
-        <link rel="stylesheet" href="/site_styles.css">
-        {% block head %}{% endblock %}
+  <head>
+    <link rel="stylesheet" href="/site_styles.css">
+    {% block head %}{% endblock %}
+  </head>
 
-    </head>
+  <body>
+
+    <header>
+      <a href="/" id="pointerLogo"><img src="/assets/logo.png" alt="Logo"></a>
+      <div class="menu">
+        {% block header %}{% endblock %}
+      </div>
+    </header>
+
+    <section class="content-layer">
+
+      {% block content %}{% endblock %}
+
+      <footer class="footer">
+        <p>Todos direitos reservados, receitas Foodfy.</p>
+      </footer>
+
+    </section>
 
 
-    <body>
-        <header>
-            <a href="/" id="pointerLogo"><img src="/assets/logo.png" alt="Logo"></a>
-            <div class="menu">
-                {% block header %}{% endblock %}
-            </div>
-        </header>
-
-        {% block content %}{% endblock %}
-
-        <footer class="footer">
-            <p>Todos direitos reservados, receitas Foodfy.</p>
-        </footer>
-
-        <script src="/script.js"></script>
-
-    </body>
+  </body>
 
 </html>
