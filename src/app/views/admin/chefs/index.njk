@@ -6,125 +6,29 @@
 <div class="menu">
   <h2 class="title">Gerenciar Chefes</h2>
   <div class="buttons">
-    <a href="#">Criar Chefe</a>
+    <a href="chefs/create">Criar Chefe</a>
   </div>
 </div>
 
 <section class="chef-manager-cards">
 
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
+  {%for chef in chefs%}
 
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
+    <div class="single-chef-manager-card">
+      <div class="avatar-chef-manager">
+        <img src="{{chef.avatar_url}}" alt="Image {{chef.name}}">
       </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
+      <div class="chef-card-description">
+        <div class="card-description-chef-name">
+          <h6>{{chef.name}}</h6>
+        </div>
+        <div class="button-description-toView">
+          <a href="chefs/show">Visualizar</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="single-chef-manager-card">
-    <div class="avatar-chef-manager">
-      <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Image recipe-name">
-    </div>
-    <div class="chef-card-description">
-      <div class="card-description-chef-name">
-        <h6>Nome do Chefe</h6>
-      </div>
-      <div class="button-description-toView">
-        <a href="#">Visualizar</a>
-      </div>
-    </div>
-  </div>
-
-
+  {%endfor%}
 
 </section>
 

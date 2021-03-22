@@ -9,7 +9,7 @@ routes.get('/', function(req, res) {
   return res.redirect('client')
 })
 
-//client
+//CLIENTS
 routes.get('/client', client.index)
 routes.get('/client/about', client.about)
 routes.get('/client/recipes', client.listRecipes)
@@ -17,11 +17,11 @@ routes.get('/client/recipe', client.showRecipe)
 routes.get('/client/chefs', client.listChefs)
 
 
-// ADMIN ROUTES
+// ADMIN CHEFS
 routes.get('/admin/chefs', chefs.index)
 routes.get('/admin/chefs/create', chefs.create)
 routes.post('/admin/chefs', chefs.post)
-routes.get('/admin/chefs/show', chefs.show)
+routes.get('/admin/chefs/:id', chefs.show)
 routes.get('/admin/chefs/edit', chefs.edit)
 routes.put('/admin/chefs', chefs.put)
 routes.delete('/admin/chefs', chefs.delete)

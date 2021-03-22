@@ -77,7 +77,7 @@ header {
   font-weight: bold;
   font-size: 14px;
   color: #6558C3;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 10px;
   margin-top: 0px;
 }
@@ -266,10 +266,11 @@ header {
 }
 
 .card-description-chef-name h6 {
+  width: 100%;
   font-weight: normal;
   font-size: 18px;
   color: #111111;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 0px;
   margin-bottom: 5px;
 }
