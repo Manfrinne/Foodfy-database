@@ -15,11 +15,12 @@
 <form method=POST id="salve" action="/admin/chefs?_method=PUT">
 
   {% include 'admin/chefs/fields.njk' %}
+  <input type="hidden" name="id" value="{{chef.id}}">
 
 </form>
 
 <form method="POST" id="delete" action="/admin/chefs?_method=DELETE">
-  <input type="hidden" name="id" value="">
+  <input type="hidden" name="id" value="{{chef.id}}">
 </form>
 
 {% endblock content %}
