@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="menu">
-  <h2 class="title">Chefe: Nome do Chefe</h2>
+  <h2 class="title">Chefe: {{chef.name}}</h2>
   <div class="buttons">
     <a href="#">Editar Chefe</a>
   </div>
@@ -13,8 +13,8 @@
 <section class="chefs-details">
 
   <div class="chef-presentation-avatar">
-    <img src="https://images.unsplash.com/photo-1474966862828-c58886978c8c?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDk2MzQ5OHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Avatar Chefe">
-    <h1 class="avatar-chef-name">Nome do Chefe</h1>
+    <img src="{{chef.avatar_url}}">
+    <h1 class="avatar-chef-name">{{chef.name}}</h1>
     <h4 class="avatar-amount-recipes">4 receitas</h1>
   </div>
 
@@ -33,7 +33,7 @@
         <div class="card-description-chef-name">
           <p>Por Nome do Chefe</p>
         </div>
-        <div class="button-description-toView">
+        <div class="button-description-toView-ShowPage">
           <a href="#">Visualizar</a>
         </div>
       </div>

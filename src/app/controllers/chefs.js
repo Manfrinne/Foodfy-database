@@ -1,10 +1,10 @@
 
-const Chefs = require('../models/chefs')
+const Chef = require('../models/chef')
 
 module.exports = {
   index(req, res) {
 
-    Chefs.all(function(chefs) {
+    Chef.all(function(chefs) {
 
       return res.render('admin/chefs/index', {chefs})
 
@@ -20,19 +20,25 @@ module.exports = {
 
     const keys = Object.keys(req.body)
     for (key of keys) {
-        if (req.body[key] == "") {
-            return res.send('Please, fill in all fields.')
-        }
+      if (req.body[key] == "") {
+        return res.send('Please, fill in all fields.')
+      }
     }
 
-    Chefs.create(req.body, function(chefs) {
+    Chef.create(req.body, function() {
       return res.redirect(`chefs`)
     })
 
   },
 
   show(req, res) {
-    return res.render('admin/chefs/show')
+
+    Chef.find(req.params.id, function(chef) {
+      if(!chef) return res.send("Chefe NOT found!")
+
+      return res.render("admin/chefs/show", { chef })
+    })
+
   },
 
   edit(req, res) {
