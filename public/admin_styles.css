@@ -73,11 +73,20 @@ header {
   justify-content: center;
 }
 
-.button-description-toView a {
+.button-description-toView-chefPage a {
   font-weight: bold;
   font-size: 14px;
   color: #6558C3;
   margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.single-recipe-card .button-description-toView-recipePage a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #6558C3;
+  margin-left: 20px;
   margin-bottom: 10px;
   margin-top: 0px;
 }
