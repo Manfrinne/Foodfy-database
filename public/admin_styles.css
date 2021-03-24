@@ -11,6 +11,10 @@ html, header, body, a {
   font-family: 'Roboto', sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   background-color: #111111;
   height: 80px;

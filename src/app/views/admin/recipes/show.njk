@@ -4,20 +4,20 @@
 {% block content %}
 
 <div class="menu">
-  <h2 class="title">Receita: Nome da receita</h2>
+  <h2 class="title">Receita: {{recipe.title}}</h2>
   <div class="buttons">
-    <a href="#">Editar Receita</a>
+    <a href="{{recipe.id}}/edit">Editar Receita</a>
   </div>
 </div>
 
 <section class="uniq_recipe">
 
   <div class="uniq_img">
-      <img src="/assets/burger.png" alt="Image {{recipe.title}}">
+      <img src="{{recipe.image}}" alt="Image {{recipe.title}}">
   </div>
 
   <div class="uniq_recipe_infor">
-      <h2 class="uniq_plate">Nome da receita</h5>
+      <h2 class="uniq_plate">{{recipe.title}}</h5>
       <p class="uniq_cooker">por Chefe Name</p>
   </div>
 
@@ -35,7 +35,7 @@
       <h3 class="uniq_topics">Modo de preparo</h3>
     </div>
     <div class="uniq_topics_contents">
-      {%for preparation in recipe.preparation_step%}
+      {%for preparation in recipe.preparation%}
         <li class="uniq_topics_content">{{preparation}}</li>
       {%endfor%}
     </div>
@@ -45,7 +45,7 @@
     </div>
     <div class="uniq_topics_contents">
       <div class="uniq_topics_content">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {{recipe.information}}
       </div>
     </div>
   </div>

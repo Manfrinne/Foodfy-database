@@ -6,7 +6,7 @@
 <div class="menu">
   <h2 class="title">Gerenciar Receitas</h2>
   <div class="buttons">
-    <a href="#">Criar Receita</a>
+    <a href="recipes/create">Criar Receita</a>
   </div>
 </div>
 
@@ -14,22 +14,26 @@
 
   <div class="chef-recipes-cards">
 
-    <div class="single-recipe-card">
-      <div class="recipe-image">
-        <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="Image recipe-name">
+    {%for recipe in recipes%}
+
+      <div class="single-recipe-card">
+        <div class="recipe-image">
+          <img src="{{recipe.image}}" alt="Image {{recipe.title}}">
+        </div>
+        <div class="card-recipe-description">
+          <div class="card-description-plate-name">
+            <h6>{{recipe.title}}</h6>
+          </div>
+          <div class="card-description-chef-name">
+            <p>Por Nome do Chefe</p>
+          </div>
+          <div class="button-description-toView-recipePage">
+            <a href="recipes/{{recipe.id}}">Visualizar</a>
+          </div>
+        </div>
       </div>
-      <div class="card-recipe-description">
-        <div class="card-description-plate-name">
-          <h6>Nome do Prato</h6>
-        </div>
-        <div class="card-description-chef-name">
-          <p>Por Nome do Chefe</p>
-        </div>
-        <div class="button-description-toView-recipePage">
-          <a href="#">Visualizar</a>
-        </div>
-      </div>
-    </div>
+
+    {%endfor%}
 
   </div>
 
