@@ -9,6 +9,17 @@
   </div>
 
   <div class="input-block">
+    <label for="chef_id">Chef</label>
+    <div>
+      <select name="chef_id">
+        {% for chef in chefOption %}
+          <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>{{chef.name}}</option>
+        {%endfor%}
+      </select>
+    </div>
+  </div>
+
+  <div class="input-block">
     <label for="title">Nome da receita</label>
     <div>
       <input type="text" name="title" placeholder="Selecione um chefe"
@@ -45,7 +56,7 @@
     <div>
       <div>
         <textarea name="information">
-        {{recipe.information}}
+          {{recipe.information}}
         </textarea>
       </div>
     </div>

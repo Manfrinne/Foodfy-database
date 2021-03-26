@@ -3,7 +3,10 @@ const db = require('../../config/db')
 
 module.exports = {
   all(callback) {
-    db.query(`SELECT * FROM recipes`, function(err, results) {
+    db.query(`
+    SELECT recipes.*, chefs.name AS chef_name
+    FROM recipes
+    LEFT JOIN chefs ON (recipes.chef_id = chefs.id)`, function(err, results) {
 
       if (err) throw `Database Error! ${err}`
 
@@ -20,7 +23,7 @@ module.exports = {
         ingredients,
         preparation,
         information,
-        created_at
+        chef_id
       ) VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING id
     `
@@ -31,7 +34,7 @@ module.exports = {
       data.ingredients,
       data.preparation,
       data.information,
-      date(Date.now()).iso
+      data.chef_id
     ]
 
     db.query(query, values, function(err, results) {
@@ -42,7 +45,10 @@ module.exports = {
   },
 
   find(id, callback) {
-    db.query(`SELECT * FROM recipes WHERE id = $1`,
+    db.query(`SELECT recipes.*, chefs.name AS chef_name
+    FROM recipes
+    LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+    WHERE recipes.id = $1`,
 
       [id], function(err, results) {
 
@@ -53,6 +59,14 @@ module.exports = {
     })
   },
 
+  chefSelectOption(callback) {
+    db.query(`SELECT name, id FROM chefs`, function(err, results) {
+      if (err) throw `Database Error! ${err}`
+
+      callback(results.rows)
+    })
+  },
+
   update(data, callback) {
     const query = `
     UPDATE recipes SET
@@ -60,8 +74,9 @@ module.exports = {
       title=($2),
       ingredients=($3),
       preparation=($4),
-      information=($5)
-    WHERE id = $6
+      information=($5),
+      chef_id=($6)
+    WHERE id = $7
     `
 
     const values = [
@@ -70,6 +85,7 @@ module.exports = {
       data.ingredients,
       data.preparation,
       data.information,
+      data.chef_id,
       data.id
     ]
 

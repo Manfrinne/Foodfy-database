@@ -6,14 +6,14 @@ module.exports = {
 
     Chef.all(function(chefs) {
 
-      return res.render('admin/chefs/index', {chefs})
+      return res.render('chefs/index', {chefs})
 
     })
 
   },
 
   create(req, res) {
-    return res.render('admin/chefs/create')
+    return res.render('chefs/create')
   },
 
   post(req, res) {
@@ -38,7 +38,7 @@ module.exports = {
 
       Chef.findRecipes(req.params.id, function(recipes) {
 
-        return res.render("admin/chefs/show", { chef, recipes })
+        return res.render("chefs/show", { chef, recipes })
 
       })
     })
@@ -50,7 +50,7 @@ module.exports = {
     Chef.find(req.params.id, function(chef) {
       if(!chef) return res.send("Chefe NOT found!")
 
-      return res.render("admin/chefs/edit", { chef })
+      return res.render("chefs/edit", { chef })
     })
 
   },

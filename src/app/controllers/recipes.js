@@ -6,14 +6,18 @@ module.exports = {
 
     Recipe.all(function(recipes) {
 
-      return res.render('admin/recipes/index', {recipes})
+      return res.render('recipes/index', {recipes})
 
     })
 
   },
 
   create(req, res) {
-    return res.render('admin/recipes/create')
+
+    Recipe.chefSelectOption(function(option) {
+      return res.render('recipes/create', {chefOption: option})
+    })
+
   },
 
   post(req, res) {
@@ -36,7 +40,7 @@ module.exports = {
     Recipe.find(req.params.id, function(recipe) {
       if(!recipe) return res.send("Recipee NOT found!")
 
-      return res.render("admin/recipes/show", { recipe })
+      return res.render("recipes/show", { recipe })
     })
 
   },
@@ -46,7 +50,11 @@ module.exports = {
     Recipe.find(req.params.id, function(recipe) {
       if(!recipe) return res.send("Recipee NOT found!")
 
-      return res.render("admin/recipes/edit", { recipe })
+      Recipe.chefSelectOption(function(option) {
+
+        return res.render("recipes/edit", { recipe, chefOption: option })
+      })
+
     })
 
   },

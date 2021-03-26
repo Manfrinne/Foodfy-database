@@ -18,22 +18,22 @@ routes.get('/client/chefs', client.listChefs)
 
 
 // ADMIN CHEFS
-routes.get('/admin/chefs', chefs.index)
-routes.get('/admin/chefs/create', chefs.create)
-routes.post('/admin/chefs', chefs.post)
-routes.get('/admin/chefs/:id', chefs.show)
-routes.get('/admin/chefs/:id/edit', chefs.edit)
-routes.put('/admin/chefs', chefs.put)
-routes.delete('/admin/chefs', chefs.delete)
+routes.get('/chefs', chefs.index)
+routes.get('/chefs/create', chefs.create)
+routes.post('/chefs', chefs.post)
+routes.get('/chefs/:id', chefs.show)
+routes.get('/chefs/:id/edit', chefs.edit)
+routes.put('/chefs', chefs.put)
+routes.delete('/chefs', chefs.delete)
 
 // ADMIN RECIPES
-routes.get('/admin/recipes', recipes.index)
-routes.get('/admin/recipes/create', recipes.create)
-routes.post('/admin/recipes', recipes.post)
-routes.get('/admin/recipes/:id', recipes.show)
-routes.get('/admin/recipes/:id/edit', recipes.edit)
-routes.put('/admin/recipes', recipes.put)
-routes.delete('/admin/recipes', recipes.delete)
+routes.get('/recipes', recipes.index)
+routes.get('/recipes/create', recipes.create)
+routes.post('/recipes', recipes.post)
+routes.get('/recipes/:id', recipes.show)
+routes.get('/recipes/:id/edit', recipes.edit)
+routes.put('/recipes', recipes.put)
+routes.delete('/recipes', recipes.delete)
 
 
 

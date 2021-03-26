@@ -230,6 +230,21 @@ header {
     color: #111111;
 }
 
+.input-block select {
+  width: 942px;
+  height: 51px;
+  outline: none;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding: 0 20px;
+  margin-top: 10px;
+  font-family: 'Roboto', regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #111111;
+}
+
 /* CRIAR CHEFE - CREATE PAGE */
 
 .buttons button {

@@ -10,13 +10,13 @@
   <section class="uniq_recipe">
 
     <div class="menu">
-      <h2 class="title">Criando Chefe</h2>
+      <h2 class="title">Criando Receita</h2>
       <div class="buttons">
-        <button type="submit" form="create">Salvar Chefe</button>
+        <button type="submit" form="create">Salvar Receita</button>
       </div>
     </div>
 
-    <form method="POST" id="create" action="/admin/recipes">
+    <form method="POST" id="create" action="/recipes">
 
       <div class="editRecipeContent">
 
@@ -29,9 +29,20 @@
         </div>
 
         <div class="input-block">
+          <label for="chef_id">Chef</label>
+          <div>
+            <select name="chef_id">
+              {% for chef in chefOption %}
+                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>{{chef.name}}</option>
+              {%endfor%}
+            </select>
+          </div>
+        </div>
+
+        <div class="input-block">
           <label for="title">Nome da receita</label>
           <div>
-            <input type="text" name="title" placeholder="Selecione um chefe"
+            <input type="text" name="title" placeholder="Nome da receita"
             value="{{recipe.title}}">
           </div>
         </div>
@@ -61,7 +72,7 @@
           <div>
             <div>
               <textarea name="information">
-              {{recipe.information}}
+                {{recipe.information}}
               </textarea>
             </div>
           </div>
