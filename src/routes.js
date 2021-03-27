@@ -15,6 +15,7 @@ routes.get('/client/about', client.about)
 routes.get('/client/recipes', client.listRecipes)
 routes.get('/client/recipes/:id', client.showRecipe)
 routes.get('/client/chefs', client.listChefs)
+routes.get('/client/findRecipe', client.findRecipe)
 
 
 // ADMIN CHEFS

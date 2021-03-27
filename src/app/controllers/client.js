@@ -4,11 +4,22 @@ const Chef = require('../models/chef')
 
 module.exports = {
   index(req, res) {
-    Recipe.all(function(recipes) {
+    const {filter} = req.query
 
-      return res.render('client/index', {recipes})
+    if (filter) {
+      Recipe.findBy(filter, function(recipes) {
 
-    })
+        return res.render('client/findRecipe', {recipes, filter})
+
+      })
+    } else {
+
+      Recipe.all(function(recipes) {
+
+        return res.render('client/index', {recipes})
+
+      })
+    }
   },
 
   about(req, res) {
@@ -16,11 +27,23 @@ module.exports = {
   },
 
   listRecipes(req, res) {
-    Recipe.all(function(recipes) {
 
-      return res.render('client/recipes', {recipes})
+    const {filter} = req.query
 
-    })
+    if (filter) {
+      Recipe.findBy(filter, function(recipes) {
+
+        return res.render('client/findRecipe', {recipes, filter})
+
+      })
+    } else {
+
+      Recipe.all(function(recipes) {
+
+        return res.render('client/recipes', {recipes})
+
+      })
+    }
   },
 
   showRecipe(req, res) {
@@ -39,5 +62,18 @@ module.exports = {
 
     })
 
+  },
+
+  findRecipe(req, res) {
+
+    const {filter} = req.query
+
+    if (filter) {
+      Recipe.findBy(filter, function(recipes) {
+
+        return res.render('client/findRecipe', {recipes, filter})
+
+      })
+    }
   }
 }

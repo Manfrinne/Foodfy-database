@@ -1,0 +1,56 @@
+{% extends "./layout.njk" %}
+
+{% block head %}
+  <script src="/client_script.js" defer></script>
+  <title>Foodfy recipes</title>
+{% endblock %}
+
+{% block header %}
+
+  <div class="header">
+
+    <div class="menu-links">
+      <a href="/client/about">Sobre</a>
+      <a href="/client/recipes"><strong>Receitas</strong></a>
+      <a href="/client/chefs">Chefs</a>
+    </div>
+
+    <form action="/client" method="GET">
+      <input type="text" name="filter" placeholder="Buscar uma receita" value={{filter}}>
+      <button type="submit">Buscar</button>
+    </form>
+
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+  <h2>Buscando por "{{filter}}"</h2>
+
+  <section class="cards">
+
+    {%for recipe in recipes%}
+
+      <div class="card" id="{{recipe.title}}" number="{{recipe.id}}">
+          <div class="card__image-container">
+              <img src="{{recipe.image}}" alt="Image {{recipe.title}}">
+          </div>
+
+          <div class="plate-name">
+              <h5>{{recipe.title}}</h5>
+          </div>
+          <div class="cooker-name">
+              <p>Por {{recipe.chef_name}}</p>
+          </div>
+      </div>
+
+    {%else%}
+
+      <h3>Receita não encontrada!</h3>
+
+    {%endfor%}
+
+  </section>
+
+{% endblock %}
