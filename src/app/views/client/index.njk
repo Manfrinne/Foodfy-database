@@ -1,7 +1,8 @@
 {% extends "./layout.njk" %}
 
 {% block head %}
-    <title>Foodfy home</title>
+  <script src="/client_script.js" defer></script>
+  <title>Foodfy home</title>
 {% endblock %}
 
 {% block header %}
@@ -25,95 +26,34 @@
 
 {% block content %}
 
-<section class="hero">
-    <div class="text-intro">
-        <h1>As melhores receitas</h1>
-        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
-    </div>
-    <img src="/assets/chef.png" alt="Foodfy">
-</section>
+  <section class="hero">
+      <div class="text-intro">
+          <h1>As melhores receitas</h1>
+          <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+      </div>
+      <img src="/assets/chef.png" alt="Foodfy">
+  </section>
 
 <h2>Mais acessadas</h2>
 
 <section class="cards">
 
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
+  {%for recipe in recipes%}
 
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
+    <div class="card" id="{{recipe.title}}" number="{{recipe.id}}">
+        <div class="card__image-container">
+            <img src="{{recipe.image}}" alt="Image {{recipe.title}}">
+        </div>
 
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
+        <div class="plate-name">
+            <h5>{{recipe.title}}</h5>
+        </div>
+        <div class="cooker-name">
+            <p>Por {{recipe.chef_name}}</p>
+        </div>
+    </div>
 
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
-
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
-
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
-
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
-
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
-
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
-
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
-
-  <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-      <div class="card__image-container">
-          <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-      </div>
-
-      <div class="plate-name">
-          <h5>Nome do Chefe</h5>
-      </div>
-      <div class="cooker-name">
-          <p>Nome do Prato</p>
-      </div>
-  </div>
+  {%endfor%}
 
 </section>
 

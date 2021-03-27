@@ -342,6 +342,75 @@ button[type="submit"] {
   margin-top: 0px;
 }
 
+/* Unique Recipe */
+
+.uniq_recipe {
+  min-height: 1250px;
+  width: 940px;
+  height: 100%;
+  margin: auto;
+}
+
+.uniq_img img{
+  object-fit: cover;
+  width: 940px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.uniq_recipe_infor {
+  text-align: center;
+}
+
+.uniq_plate {
+  font-family: 'Roboto', bold;
+  font-size: 36px;
+  color: #111111;
+  line-height: 42px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.uniq_cooker {
+  font-family: 'Roboto', regular;
+  font-size: 20px;
+  color: #777777;
+  line-height: 24px;
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+.uniq_recipe_content {
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.uniq_topics {
+  font-family: 'Roboto', bold;
+  font-size: 26px;
+  color: #111111;
+  line-height: 28px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.uniq_topics_content {
+  font-family: 'Roboto', regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.uniq_topics_contents li:last-child {
+  margin-bottom: 42px;
+}
+
+.topics {
+  display: flex;
+  align-items: baseline;
+}
 
 
 

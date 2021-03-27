@@ -13,7 +13,7 @@ routes.get('/', function(req, res) {
 routes.get('/client', client.index)
 routes.get('/client/about', client.about)
 routes.get('/client/recipes', client.listRecipes)
-routes.get('/client/recipe', client.showRecipe)
+routes.get('/client/recipes/:id', client.showRecipe)
 routes.get('/client/chefs', client.listChefs)
 
 

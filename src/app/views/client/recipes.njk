@@ -1,7 +1,8 @@
 {% extends "./layout.njk" %}
 
 {% block head %}
-    <title>Foodfy recipes</title>
+  <script src="/client_script.js" defer></script>
+  <title>Foodfy recipes</title>
 {% endblock %}
 
 {% block header %}
@@ -25,164 +26,25 @@
 
 {% block content %}
 
-  <section class="cards">
+<section class="cards">
 
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
+  {%for recipe in recipes%}
+
+    <div class="card" id="{{recipe.title}}" number="{{recipe.id}}">
         <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
+            <img src="{{recipe.image}}" alt="Image {{recipe.title}}">
         </div>
 
         <div class="plate-name">
-            <h5>Nome do Chefe</h5>
+            <h5>{{recipe.title}}</h5>
         </div>
         <div class="cooker-name">
-            <p>Nome do Prato</p>
+            <p>Por {{recipe.chef_name}}</p>
         </div>
     </div>
 
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
+  {%endfor%}
 
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-    <div class="card" id="{{recipe.title}}" number="{{recipe.number}}">
-        <div class="card__image-container">
-            <img src="/assets/espaguete.png" alt="Image {{recipe.title}}">
-        </div>
-
-        <div class="plate-name">
-            <h5>Nome do Chefe</h5>
-        </div>
-        <div class="cooker-name">
-            <p>Nome do Prato</p>
-        </div>
-    </div>
-
-  </section>
+</section>
 
 {% endblock %}
