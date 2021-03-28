@@ -21,6 +21,23 @@
 
 <form method="POST" id="delete" action="/chefs?_method=DELETE">
   <input type="hidden" name="id" value="{{chef.id}}">
+  <input type="hidden" id="registeredRecipes" value="{{chef.total_recipes}}" >
 </form>
+
+  <script>
+
+    const recipes = (+(document.getElementById("registeredRecipes").value))
+
+    const formDelete = document.querySelector("#delete")
+    formDelete.addEventListener("submit", function(event) {
+
+      if(recipes) {
+        event.preventDefault()
+
+        alert("CHEFE NÃO PODE SER DELETADO!")
+      }
+    })
+
+  </script>
 
 {% endblock content %}

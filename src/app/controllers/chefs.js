@@ -76,9 +76,7 @@ module.exports = {
 
     Chef.delete(req.body.id, function() {
 
-      return res.redirect('chefs')
-
+        return res.redirect('chefs')
     })
-
   }
 }
